@@ -24,18 +24,11 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
+    background: url(../img/bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
     height:100%;
@@ -47,16 +40,22 @@ body {
 
 /* Portrait layout (default) */
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
+    /*background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    /*position:absolute;             /* position in the center of the screen */
+
     height:50px;                   /* text area height */
     width:225px;                   /* text area width */
     text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+    padding:0px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin-left: 50px;
+    margin-top: 50px
+}
+
+.maa-logo {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 100px;
+
 }
 
 /* Landscape layout (with min-width) */
@@ -76,6 +75,37 @@ h1 {
     overflow:visible;
     padding:0px;
     text-align:center;
+    font-color:white;
+}
+
+.region {
+    margin-top: 50px;
+}
+
+.region > h3 {
+    text-transform: none;
+    font-size:20px;
+    font-weight:normal;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+    color:#ffffff;
+}
+
+.international{
+    margin-bottom: 10px;
+}
+
+.btn-image{
+    margin-left:20px;
+}
+
+.local{
+    margin-bottom: 30px;
+}
+
+.or{
+    margin-bottom: 20px;
 }
 
 .event {
@@ -102,13 +132,13 @@ h1 {
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 @-webkit-keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;

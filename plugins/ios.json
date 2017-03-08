@@ -10,6 +10,9 @@
         "cordova-plugin-crosswalk-webview": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         }

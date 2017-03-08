@@ -28,7 +28,7 @@ var app = {
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
-        var ref = window.open('http://www.muslimaid.org.au', '_blank', 'location=no,toolbar=no');
+
     },
 
     // Update DOM on a Received Event
@@ -39,9 +39,18 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
     }
 };
 
 app.initialize();
+
+
+function international(){
+    var ref = cordova.InAppBrowser.open('https://www.muslimaid.org/', '_blank', 'location=no,toolbar=no');
+}
+
+function local(){
+    var ref = cordova.InAppBrowser.open('https://www.muslimaid.org.au/', '_blank', 'location=no,toolbar=no');
+}
+
+
