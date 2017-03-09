@@ -45,10 +45,13 @@ var app = {
 
 
 function international(){
+
     var ref = cordova.InAppBrowser.open('https://www.muslimaid.org/', '_blank', 'location=no,toolbar=no');
-};
+}
+
 
 function local(){
+
     var ref = cordova.InAppBrowser.open('https://www.muslimaid.org.au/', '_blank', 'location=no,toolbar=no');
 };
 
