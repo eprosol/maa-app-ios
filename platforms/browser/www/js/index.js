@@ -29,6 +29,8 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
 
+        var ref = cordova.InAppBrowser.open('https://www.muslimaid.org/', '_self', 'location=no,toolbar=no');
+
     },
 
     // Update DOM on a Received Event
@@ -51,6 +53,10 @@ function international(){
 
 function local(){
     var ref = cordova.InAppBrowser.open('https://www.muslimaid.org.au/', '_blank', 'location=no,toolbar=no');
+}
+
+function clickme(){
+    alert('Open Link');
 }
 
 
